@@ -25,7 +25,7 @@ define rbenv::install(
     path    => ['/bin', '/usr/bin', '/usr/sbin'],
     timeout => 100,
     cwd     => $home_path,
-    require => Package['git'],
+    require => Package['git-core'],
   }
 
   file { "rbenv::rbenvrc ${user}":
